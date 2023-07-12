@@ -62,7 +62,7 @@ var NGComments = ["死ね","バカ","ttps.",".exe"]; // 簡易的なNGワード�
 var regex = new RegExp(NGComments.join("|"));
 function test(wcheck) {
   if (wcheck.match(regex) != null) {
-    alert("ERROR: コメントにNGワードが含まれています");
+    alert("ERROR: コメントにNGワードまたは、リンクが含まれています");
     return false;
   }
   document.getElementById("submitbutton").disabled = true;
